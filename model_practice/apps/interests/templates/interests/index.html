@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Users and Interests</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'interests/css/styles.css' %}">
+	</head>
+	<body>	
+		<div class="container">
+			<div class="row">
+				<h1>All Users and Interests</h1>
+				<ol>
+					{% for user in users %}
+						<li><a href="{{user.id}}"><h2>{{user.first_name}} {{user.last_name}}</h2></a> 
+							<h3>{{user.interest.name}}</h3>
+						</li>
+					{% endfor %}
+				</ol>
+			</div>
+		</div>
+	</body>
+</html>

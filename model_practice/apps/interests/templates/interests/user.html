@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>{{user.first_name}} - Interests</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'interests/css/styles.css' %}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1>User ID: {{user.id}}</h1>
+				<h1>Name: {{user.first_name}} {{user.last_name}}</h1>
+				<h2>Occupation: {{user.occupation}}</h2>
+				<h2>Interest: {{user.interest.name}}</h2>
+				<h2>Age: {{user.age}}</h2>
+			</div>
+			<a href="/interests">Go back to users and interests</a>
+		</div>
+	</body>
+</html>
